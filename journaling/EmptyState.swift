@@ -1,18 +1,44 @@
-//
+
 //  EmptyState.swift
-//  journaling
+//  Journali
 //
-//  Created by Dana Alghamdi on 18/04/1446 AH.
+//  Created by Yomna Eisa on 20/10/2024.
 //
+
+// This file contains the code for the "Empty State" view. it shows when the user does not have any saved journals.
 
 import SwiftUI
 
-struct EmptyState: View {
+struct EmptyStateView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+        
+        Color.black.edgesIgnoringSafeArea(.all)
+            
+            HStack {
+                Text("Journal").font(.largeTitle).foregroundStyle(.white).bold()
+               
+                Spacer()
+                
+                Image(systemName: "line.3.horizontal.decrease.circle.fill").font(.title).foregroundStyle(.btnBg).background(Color.pur).clipShape(.circle) // Edit colors here
+                
+                Image(systemName: "plus.circle.fill").font(.title).foregroundStyle(.btnBg).background(Color.pur).clipShape(.circle) // Edit colors here
+                // this is the gray .foregroundStyle(Color(red: 23 / 255, green: 24 / 255, blue: 27 / 255).opacity(0.3))
+            }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+            .padding(30)// End HStack
+    
+            VStack {
+                Image("icon").imageScale(.large).padding(10)
+                Text("Begin Your Journal").font(.title).bold().foregroundStyle(Color.pur).padding(3)
+                
+                Text("Craft your personal diary, tap the plus icon to begin").foregroundStyle(Color.white)
+                    
+            }
+                .padding(50)// End of VStack
+        } // End of ZStack
     }
 }
 
 #Preview {
-    EmptyState()
+    EmptyStateView()
 }
