@@ -14,9 +14,9 @@
 		112DC4202CC61EDB00F4EF10 /* journalingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DC41F2CC61EDB00F4EF10 /* journalingTests.swift */; };
 		112DC42A2CC61EDB00F4EF10 /* journalingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DC4292CC61EDB00F4EF10 /* journalingUITests.swift */; };
 		112DC42C2CC61EDB00F4EF10 /* journalingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DC42B2CC61EDB00F4EF10 /* journalingUITestsLaunchTests.swift */; };
-		112DC4392CC62BCA00F4EF10 /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DC4382CC62BCA00F4EF10 /* EmptyState.swift */; };
-		112DC43B2CC6403D00F4EF10 /* mainpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DC43A2CC6403D00F4EF10 /* mainpage.swift */; };
-		112DC43D2CC7A4C800F4EF10 /* mainpage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DC43C2CC7A4C800F4EF10 /* mainpage2.swift */; };
+		112DC4442CCA2B0300F4EF10 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DC4432CCA2B0300F4EF10 /* SwiftUIView.swift */; };
+		112DC44E2CCF732200F4EF10 /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DC44D2CCF732200F4EF10 /* JournalEntry.swift */; };
+		112DC4502CCF734700F4EF10 /* JournalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DC44F2CCF734700F4EF10 /* JournalViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,9 +47,9 @@
 		112DC4252CC61EDB00F4EF10 /* journalingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = journalingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		112DC4292CC61EDB00F4EF10 /* journalingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = journalingUITests.swift; sourceTree = "<group>"; };
 		112DC42B2CC61EDB00F4EF10 /* journalingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = journalingUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		112DC4382CC62BCA00F4EF10 /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
-		112DC43A2CC6403D00F4EF10 /* mainpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainpage.swift; sourceTree = "<group>"; };
-		112DC43C2CC7A4C800F4EF10 /* mainpage2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainpage2.swift; sourceTree = "<group>"; };
+		112DC4432CCA2B0300F4EF10 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		112DC44D2CCF732200F4EF10 /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
+		112DC44F2CCF734700F4EF10 /* JournalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,9 +102,9 @@
 			children = (
 				112DC40E2CC61EDB00F4EF10 /* journalingApp.swift */,
 				112DC4102CC61EDB00F4EF10 /* ContentView.swift */,
-				112DC4382CC62BCA00F4EF10 /* EmptyState.swift */,
-				112DC43A2CC6403D00F4EF10 /* mainpage.swift */,
-				112DC43C2CC7A4C800F4EF10 /* mainpage2.swift */,
+				112DC44D2CCF732200F4EF10 /* JournalEntry.swift */,
+				112DC44F2CCF734700F4EF10 /* JournalViewModel.swift */,
+				112DC4432CCA2B0300F4EF10 /* SwiftUIView.swift */,
 				112DC4122CC61EDB00F4EF10 /* Assets.xcassets */,
 				112DC4142CC61EDB00F4EF10 /* Preview Content */,
 			);
@@ -266,11 +266,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				112DC43D2CC7A4C800F4EF10 /* mainpage2.swift in Sources */,
-				112DC4392CC62BCA00F4EF10 /* EmptyState.swift in Sources */,
 				112DC4112CC61EDB00F4EF10 /* ContentView.swift in Sources */,
+				112DC44E2CCF732200F4EF10 /* JournalEntry.swift in Sources */,
+				112DC4502CCF734700F4EF10 /* JournalViewModel.swift in Sources */,
 				112DC40F2CC61EDB00F4EF10 /* journalingApp.swift in Sources */,
-				112DC43B2CC6403D00F4EF10 /* mainpage.swift in Sources */,
+				112DC4442CCA2B0300F4EF10 /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

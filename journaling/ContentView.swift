@@ -4,25 +4,30 @@
 //
 //  Created by Dana Alghamdi on 18/04/1446 AH.
 //
-
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var viewModel: JournalViewModel
     @State private var isActive = false
 
     var body: some View {
         ZStack {
             if isActive {
-                // Replace this with your main app view
-                EmptyStateView()
+                Main2()
             } else {
                 ZStack {
-                    Color.black
-                        .ignoresSafeArea()
+                    LinearGradient(
+                        gradient: Gradient(colors: [.btnBg, .black]),
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                    .ignoresSafeArea()
+
                     VStack {
                         Image("icon")
-                            .imageScale(.large)
-                            .foregroundStyle(.tint)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 120, height: 120)
                         Text("Journali")
                             .foregroundColor(.white)
                             .font(.largeTitle)
@@ -33,7 +38,6 @@ struct ContentView: View {
                     .padding()
                 }
                 .onAppear {
-                    // Simulate a delay for the splash screen (e.g., 2 seconds)
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                         withAnimation {
                             isActive = true
@@ -45,6 +49,26 @@ struct ContentView: View {
     }
 }
 
+// Extension to create Color from hex
+extension Color {
+    init?(hex: String) {
+        var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
+        if hexSanitized.hasPrefix("#") {
+            hexSanitized.removeFirst()
+        }
+
+        var rgb: UInt64 = 0
+        Scanner(string: hexSanitized).scanHexInt64(&rgb)
+
+        let r = Double((rgb >> 16) & 0xFF) / 255.0
+        let g = Double((rgb >> 8) & 0xFF) / 255.0
+        let b = Double(rgb & 0xFF) / 255.0
+
+        self.init(red: r, green: g, blue: b)
+    }
+}
+
 #Preview {
     ContentView()
+        .environmentObject(JournalViewModel())
 }
