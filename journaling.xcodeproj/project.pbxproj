@@ -16,6 +16,7 @@
 		112DC42C2CC61EDB00F4EF10 /* journalingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DC42B2CC61EDB00F4EF10 /* journalingUITestsLaunchTests.swift */; };
 		112DC4392CC62BCA00F4EF10 /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DC4382CC62BCA00F4EF10 /* EmptyState.swift */; };
 		112DC43B2CC6403D00F4EF10 /* mainpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DC43A2CC6403D00F4EF10 /* mainpage.swift */; };
+		112DC43D2CC7A4C800F4EF10 /* mainpage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DC43C2CC7A4C800F4EF10 /* mainpage2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		112DC42B2CC61EDB00F4EF10 /* journalingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = journalingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		112DC4382CC62BCA00F4EF10 /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
 		112DC43A2CC6403D00F4EF10 /* mainpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainpage.swift; sourceTree = "<group>"; };
+		112DC43C2CC7A4C800F4EF10 /* mainpage2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainpage2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				112DC4102CC61EDB00F4EF10 /* ContentView.swift */,
 				112DC4382CC62BCA00F4EF10 /* EmptyState.swift */,
 				112DC43A2CC6403D00F4EF10 /* mainpage.swift */,
+				112DC43C2CC7A4C800F4EF10 /* mainpage2.swift */,
 				112DC4122CC61EDB00F4EF10 /* Assets.xcassets */,
 				112DC4142CC61EDB00F4EF10 /* Preview Content */,
 			);
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				112DC43D2CC7A4C800F4EF10 /* mainpage2.swift in Sources */,
 				112DC4392CC62BCA00F4EF10 /* EmptyState.swift in Sources */,
 				112DC4112CC61EDB00F4EF10 /* ContentView.swift in Sources */,
 				112DC40F2CC61EDB00F4EF10 /* journalingApp.swift in Sources */,
