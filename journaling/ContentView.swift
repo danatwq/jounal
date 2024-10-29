@@ -2,73 +2,56 @@
 //  ContentView.swift
 //  journaling
 //
-//  Created by Dana Alghamdi on 18/04/1446 AH.
+//  Created by Dana Alghamdi on 26/04/1446 AH.
 //
+
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var viewModel: JournalViewModel
     @State private var isActive = false
 
     var body: some View {
         ZStack {
             if isActive {
-                Main2()
+                MainPage2() // Replace with your main page view
             } else {
-                ZStack {
-                    LinearGradient(
-                        gradient: Gradient(colors: [.btnBg, .black]),
-                        startPoint: .top,
-                        endPoint: .bottom
-                    )
-                    .ignoresSafeArea()
-
-                    VStack {
-                        Image("icon")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 120, height: 120)
-                        Text("Journali")
-                            .foregroundColor(.white)
-                            .font(.largeTitle)
-                            .fontWeight(.black)
-                        Text("Your thoughts, your story")
-                            .foregroundStyle(.white)
-                    }
-                    .padding()
-                }
-                .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                        withAnimation {
-                            isActive = true
-                        }
-                    }
+                SplashScreenView()
+            }
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                withAnimation {
+                    isActive = true
                 }
             }
         }
     }
 }
 
-// Extension to create Color from hex
-extension Color {
-    init?(hex: String) {
-        var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
-        if hexSanitized.hasPrefix("#") {
-            hexSanitized.removeFirst()
+struct SplashScreenView: View {
+    var body: some View {
+        ZStack {
+            LinearGradient(gradient: Gradient(colors: [.btnBg, .btnBg, .black]), startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea()
+            VStack {
+                Image("icon") // Ensure you have this image in your assets
+                    .resizable()
+                    .frame(width: 77.7, height: 101)
+                Text("Journali")
+                    .fontWeight(.black)
+                    .foregroundStyle(Color.white)
+                    .font(.system(size: 42))
+                Text("Your thoughts, your story")
+                    .fontWeight(.light)
+                    .foregroundColor(Color.white)
+                    .font(.system(size: 18))
+                    .padding(.top, -12)
+            }
         }
-
-        var rgb: UInt64 = 0
-        Scanner(string: hexSanitized).scanHexInt64(&rgb)
-
-        let r = Double((rgb >> 16) & 0xFF) / 255.0
-        let g = Double((rgb >> 8) & 0xFF) / 255.0
-        let b = Double(rgb & 0xFF) / 255.0
-
-        self.init(red: r, green: g, blue: b)
     }
 }
 
 #Preview {
     ContentView()
-        .environmentObject(JournalViewModel())
 }
+
